@@ -1,0 +1,17 @@
+id: DWW-CANARY-001
+title: Planted canary marker detected
+status: stable
+category: canary_hit
+applies_to: [github_gist, github_code, github_events, crt_sh]
+detection:
+  selection:
+    canary_marker: true
+  condition: selection
+severity_base: 0
+confidence_base: 1.0
+attack: []
+false_positives: []
+tests:
+  positive: ['token=CNRY-ABCD1234 found in public gist']
+  negative: ['normal content without marker']
+playbook: ""

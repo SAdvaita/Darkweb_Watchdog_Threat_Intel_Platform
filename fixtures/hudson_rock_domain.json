@@ -1,0 +1,16 @@
+{
+  "domain": "example.com",
+  "compromised_employees": 3,
+  "stealer_logs": true,
+  "credentials_exposed": 3,
+  "first_seen": "2024-01-10T08:00:00Z",
+  "last_seen": "2024-01-15T10:00:00Z",
+  "computers": [
+    {
+      "computer_name": "DESKTOP-EXAMPLE",
+      "operating_system": "Windows 10",
+      "malware_path": "C:\\Users\\user\\AppData\\Roaming\\RedLine",
+      "date_compromised": "2024-01-10T08:00:00Z"
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "id": 123456789,
+    "logged_at": "2024-01-15T10:00:00Z",
+    "not_before": "2024-01-15T10:00:00Z",
+    "not_after": "2024-04-15T10:00:00Z",
+    "name_value": "api.example.com\nexample.com\nwww.example.com",
+    "issuer_ca_id": 183267,
+    "issuer_name": "C=US, O=Let's Encrypt, CN=R3"
+  },
+  {
+    "id": 123456790,
+    "logged_at": "2024-01-16T12:00:00Z",
+    "not_before": "2024-01-16T12:00:00Z",
+    "not_after": "2024-04-16T12:00:00Z",
+    "name_value": "examp1e.com",
+    "issuer_ca_id": 183267,
+    "issuer_name": "C=US, O=Let's Encrypt, CN=R3"
+  }
+]

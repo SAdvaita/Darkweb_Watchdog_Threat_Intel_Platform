@@ -1,0 +1,17 @@
+id: DWW-INFRA-001
+title: Organization infrastructure mentioned in public content
+status: stable
+category: infrastructure_mention
+applies_to: [github_gist, github_code, github_events]
+detection:
+  selection:
+    regex: '(?i)(?:10\.\d+\.\d+\.\d+|192\.168\.\d+\.\d+|172\.(?:1[6-9]|2\d|3[01])\.\d+\.\d+)'
+  condition: selection
+severity_base: 25
+confidence_base: 0.5
+attack: [T1596]
+false_positives: [documentation, tutorials using private IP examples]
+tests:
+  positive: ['server at 192.168.1.100 exposed']
+  negative: ['example server at 203.0.113.1']
+playbook: credential_leak

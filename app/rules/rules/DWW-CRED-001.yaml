@@ -1,0 +1,17 @@
+id: DWW-CRED-001
+title: Corporate email with password pair
+status: stable
+category: credential_leak
+applies_to: [github_gist, github_code, github_events]
+detection:
+  selection:
+    regex: '[A-Za-z0-9._+-]+@{{watchlist.domains}}[:;, ]+[^ ]{6,}'
+  condition: selection
+severity_base: 40
+confidence_base: 0.7
+attack: [T1589.001, T1078]
+false_positives: [documentation samples, test fixtures]
+tests:
+  positive: ['alice@acme.example:Winter2024!']
+  negative: ['user@other.example:password']
+playbook: credential_leak

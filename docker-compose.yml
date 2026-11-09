@@ -1,0 +1,29 @@
+version: "3.9"
+
+services:
+  api:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+      - watchdog_data:/app/data
+    env_file:
+      - .env
+    environment:
+      DATABASE_URL: sqlite:///./data/watchdog.db
+    restart: unless-stopped
+
+  # Uncomment to use PostgreSQL instead of SQLite
+  # db:
+  #   image: postgres:16-alpine
+  #   environment:
+  #     POSTGRES_DB: watchdog
+  #     POSTGRES_USER: watchdog
+  #     POSTGRES_PASSWORD: changeme
+  #   volumes:
+  #     - pg_data:/var/lib/postgresql/data
+
+volumes:
+  watchdog_data:
+  # pg_data:

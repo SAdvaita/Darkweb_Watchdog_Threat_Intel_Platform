@@ -1,0 +1,12 @@
+[
+  {
+    "id": "1",
+    "name": "Example Corp",
+    "domain": "example.com",
+    "group": "lockbit",
+    "published": "2024-01-15T10:00:00Z",
+    "post_url": "http://lockbit3.example.onion/victims/example-corp",
+    "description": "Example Corp, a Fortune 500 company, fell victim to LockBit ransomware attack.",
+    "data_size": "500GB"
+  }
+]

@@ -1,0 +1,19 @@
+id: DWW-CRED-003
+title: .env file with corporate domain credentials
+status: stable
+category: credential_leak
+applies_to: [github_gist, github_code, github_events]
+detection:
+  selection:
+    regex: '(?i)(?:DB_PASS|DATABASE_PASSWORD|SMTP_PASSWORD|APP_SECRET)\s*=\s*\S{8,}'
+  placeholder:
+    wordlist: ['your_password_here', 'your_password', 'changeme', 'placeholder']
+  condition: selection and not placeholder
+severity_base: 40
+confidence_base: 0.75
+attack: [T1552.001]
+false_positives: [.env.example files with placeholder values]
+tests:
+  positive: ['DB_PASS=SuperSecret123!']
+  negative: ['DB_PASS=your_password_here']
+playbook: credential_leak

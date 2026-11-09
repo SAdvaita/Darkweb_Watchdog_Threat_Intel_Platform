@@ -1,0 +1,17 @@
+id: DWW-RANSOM-002
+title: Vendor appears on ransomware leak site
+status: stable
+category: ransomware_victim_vendor
+applies_to: [ransomware_live]
+detection:
+  selection:
+    wordlist: ['supply_chain', 'vendor', 'third_party']
+  condition: selection
+severity_base: 35
+confidence_base: 0.6
+attack: [T1195]
+false_positives: [generic vendor mentions]
+tests:
+  positive: ['vendor acme-supplier.com appeared on lockbit']
+  negative: ['unrelated content']
+playbook: ransomware_victim

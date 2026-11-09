@@ -1,0 +1,17 @@
+id: DWW-LOOKALIKE-001
+title: New certificate for lookalike domain
+status: stable
+category: lookalike_domain
+applies_to: [crt_sh]
+detection:
+  selection:
+    wordlist: ['lookalike', 'typosquat', 'homoglyph']
+  condition: selection
+severity_base: 30
+confidence_base: 0.7
+attack: [T1583.001, T1566]
+false_positives: [legitimate domain registrations]
+tests:
+  positive: ['lookalike domain acm3.example detected']
+  negative: ['legitimate subdomain api.acme.example']
+playbook: lookalike_domain

@@ -1,0 +1,21 @@
+{
+  "query_status": "ok",
+  "data": [
+    {
+      "id": "1234567",
+      "ioc": "1.2.3.4",
+      "ioc_type": "ip:port",
+      "ioc_type_desc": "IPv4 address and port number",
+      "threat_type": "botnet_cc",
+      "threat_type_desc": "Botnet C&C",
+      "malware": "mirai",
+      "malware_printable": "Mirai",
+      "malware_alias": "Mirai Botnet",
+      "confidence_level": 75,
+      "first_seen": "2024-01-10T08:00:00Z",
+      "last_seen": "2024-01-15T10:00:00Z",
+      "reporter": "abuse_reporter",
+      "reference": "https://example.com/report/1234"
+    }
+  ]
+}

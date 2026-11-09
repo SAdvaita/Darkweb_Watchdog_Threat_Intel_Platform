@@ -1,0 +1,17 @@
+id: DWW-RANSOM-001
+title: Organization appears on ransomware leak site
+status: stable
+category: ransomware_victim_self
+applies_to: [ransomware_live]
+detection:
+  selection:
+    wordlist: ['{{watchlist.domains}}']
+  condition: selection
+severity_base: 80
+confidence_base: 0.9
+attack: [T1486]
+false_positives: [name collision with unrelated organizations]
+tests:
+  positive: ['victim: acme.example posted by lockbit']
+  negative: ['victim: other-company.com']
+playbook: ransomware_victim

@@ -1,0 +1,17 @@
+id: DWW-IOC-001
+title: Watched IP or domain appears in IOC feed
+status: stable
+category: ioc_hit
+applies_to: [otx_pulses, threatfox]
+detection:
+  selection:
+    wordlist: ['malicious', 'threat', 'indicator', 'ioc']
+  condition: selection
+severity_base: 25
+confidence_base: 0.75
+attack: [T1583]
+false_positives: [false positive IOC submissions]
+tests:
+  positive: ['malicious indicator 1.2.3.4 detected']
+  negative: ['safe domain example.com']
+playbook: credential_leak

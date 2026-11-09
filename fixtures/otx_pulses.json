@@ -1,0 +1,22 @@
+{
+  "results": [
+    {
+      "id": "pulse-001",
+      "name": "Malicious Infrastructure Example",
+      "description": "Example threat pulse for testing",
+      "created": "2024-01-15T10:00:00Z",
+      "modified": "2024-01-15T10:00:00Z",
+      "tlp": "white",
+      "tags": ["malware", "c2"],
+      "indicators": [
+        {
+          "id": "ind-001",
+          "indicator": "1.2.3.4",
+          "type": "IPv4",
+          "description": "malicious C2 server",
+          "created": "2024-01-15T10:00:00Z"
+        }
+      ]
+    }
+  ]
+}

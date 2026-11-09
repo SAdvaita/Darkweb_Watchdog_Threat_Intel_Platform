@@ -1,0 +1,17 @@
+id: DWW-INFOSTEAL-001
+title: Hudson Rock infostealer exposure for watched domain
+status: stable
+category: infostealer_exposure
+applies_to: [hudson_rock]
+detection:
+  selection:
+    wordlist: ['compromised_employees', 'stealer_logs', 'credentials_exposed']
+  condition: selection
+severity_base: 45
+confidence_base: 0.8
+attack: [T1555.003, T1078]
+false_positives: []
+tests:
+  positive: ['compromised_employees: 3']
+  negative: ['no_employees_exposed: true']
+playbook: infostealer_exposure
